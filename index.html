@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer Evaluation Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>Engineer Evaluation Dashboard</h1>
+    </header>
+
+    <nav class="top-nav" aria-label="Main navigation">
+        <a href="#candidates">Candidates</a>
+        <a href="#evaluations">Evaluations</a>
+        <a href="#form">Evaluation Form</a>
+    </nav>
+
+    <main class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#candidates">Candidates</a></li>
+                <li><a href="#evaluations">Evaluations</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </aside>
+
+        <section class="content" aria-label="Evaluation content">
+
+            <section id="candidates">
+
+                <header class="section-heading">
+                    <h2>Trainee Evaluation Cards</h2>
+                    <p>3 Trainees</p>
+                </header>
+
+                <div class="cards">
+
+                    <article class="card">
+                        <span class="status">Passed</span>
+                        <h3>Malik Hamdan</h3>
+                        <p>Department: Frontend</p>
+                        <p>Score: 90</p>
+                        <a href="#details">View Details</a>
+                    </article>
+
+                    <article class="card">
+                        <span class="status">Pending</span>
+                        <h3>Saif Khalifa</h3>
+                        <p>Department: Backend</p>
+                        <p>Score: 75</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="status">Passed</span>
+                        <h3>Abdallah Badran</h3>
+                        <p>Department: Testing</p>
+                        <p>Score: 85</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section id="evaluations">
+
+                <h2>Candidate Evaluation Table</h2>
+
+                <div class="table-scroll">
+                    <table>
+
+                        <caption>Candidate Evaluation Results</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Department</th>
+                                <th scope="col">Score</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Malik Hamdan</th>
+                                <td>Frontend</td>
+                                <td>90</td>
+                                <td>Passed</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Saif Khalifa</th>
+                                <td>Backend</td>
+                                <td>75</td>
+                                <td>Pending</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Abdallah Badran</th>
+                                <td>Testing</td>
+                                <td>85</td>
+                                <td>Passed</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </section>
+
+            <section id="form">
+
+                <h2>Evaluation Form</h2>
+
+                <form>
+
+                    <label for="name">Evaluator Name</label>
+                    <input type="text" id="name" name="name" minlength="3" required>
+
+                    <label for="email">Evaluator Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="candidate">Candidate</label>
+                    <select id="candidate" name="candidate" required>
+                        <option value="">Select Candidate</option>
+                        <option value="malik">Malik Hamdan</option>
+                        <option value="saif">Saif Khalifa</option>
+                        <option value="abdallah">Abdallah Badran</option>
+                    </select>
+
+                    <label for="score">Evaluation Score</label>
+                    <input type="number" id="score" name="score" min="0" max="100" required>
+
+                    <label for="feedback">Feedback</label>
+                    <textarea id="feedback" name="feedback" minlength="10" required></textarea>
+
+                    <button type="submit">Submit Evaluation</button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+        <aside class="feed">
+            <h2>Evaluation Feed</h2>
+            <p>Malik Hamdan: Passed</p>
+            <p>Saif Khalifa: Pending</p>
+            <p>Abdallah Badran: Passed</p>
+        </aside>
+
+    </main>
+
+    <section id="details" class="modal" role="dialog" aria-modal="true" aria-labelledby="details-title">
+
+        <div class="modal-box">
+            <h2 id="details-title">Candidate Details</h2>
+            <p>Name: Malik Hamdan</p>
+            <p>Department: Frontend</p>
+            <p>Score: 90</p>
+            <p>Status: Passed</p>
+            <a href="#candidates">Close</a>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
